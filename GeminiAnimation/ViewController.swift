@@ -24,6 +24,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collectionView.delegate = self
         collectionView.dataSource = self
         
+        // Configure the animation - Change this part to change the animation(from Gemini github)
+        collectionView.gemini
+            .cubeAnimation()
+            .cubeDegree(90)
         
     }
     
@@ -53,6 +57,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Set the image
         cell.setCell(imageName: photos[indexPath.row])
         
+        // Animate
+        self.collectionView.animateCell(cell)
         
         // Return the cell
         return cell
@@ -61,7 +67,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         
-        // Animate
+        // Animate after checking if its nil
         if let cell = cell as? MyCell {
             self.collectionView.animateCell(cell)
         }
