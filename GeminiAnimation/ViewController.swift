@@ -12,7 +12,7 @@ import Gemini
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     //Outlets
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionView: GeminiCollectionView!
     
     // Properties
     let photos = ["1", "2", "3", "4", "5"]
@@ -26,6 +26,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        // Animate
+        self.collectionView.animateVisibleCells()
+        
+    }
 
     //=================================
     // MARK: - Datasource and Delegates
@@ -33,16 +40,32 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
+        // Return the total number of photos
         return photos.count
         
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        
+        // Create the cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "gemCell", for: indexPath) as! MyCell
+        
+        // Set the image
+        cell.setCell(imageName: photos[indexPath.row])
+        
+        
+        // Return the cell
+        return cell
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        <#code#>
+        
+        // Animate
+        if let cell = cell as? MyCell {
+            self.collectionView.animateCell(cell)
+        }
+        
     }
     
 }
