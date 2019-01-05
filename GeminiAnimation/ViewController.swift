@@ -7,14 +7,43 @@
 //
 
 import UIKit
+import Gemini
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
+    //Outlets
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    // Properties
+    let photos = ["1", "2", "3", "4", "5"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Delegates and datasource
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
+        
     }
 
-
+    //=================================
+    // MARK: - Datasource and Delegates
+    //=================================
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return photos.count
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        <#code#>
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        <#code#>
+    }
+    
 }
 
