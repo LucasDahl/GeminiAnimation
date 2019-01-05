@@ -12,6 +12,7 @@
 		95F813EE21E1505D00A04915 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95F813EC21E1505D00A04915 /* Main.storyboard */; };
 		95F813F021E1505E00A04915 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95F813EF21E1505E00A04915 /* Assets.xcassets */; };
 		95F813F321E1505E00A04915 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95F813F121E1505E00A04915 /* LaunchScreen.storyboard */; };
+		95F813FB21E1529000A04915 /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F813FA21E1529000A04915 /* MyCell.swift */; };
 		F739F222E851821A8209E73E /* Pods_GeminiAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 936FF94485782B6DC26D4730 /* Pods_GeminiAnimation.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		95F813EF21E1505E00A04915 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95F813F221E1505E00A04915 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95F813F421E1505E00A04915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95F813FA21E1529000A04915 /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			children = (
 				95F813E821E1505D00A04915 /* AppDelegate.swift */,
 				95F813EA21E1505D00A04915 /* ViewController.swift */,
+				95F813FA21E1529000A04915 /* MyCell.swift */,
 				95F813EC21E1505D00A04915 /* Main.storyboard */,
 				95F813EF21E1505E00A04915 /* Assets.xcassets */,
 				95F813F121E1505E00A04915 /* LaunchScreen.storyboard */,
@@ -200,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95F813FB21E1529000A04915 /* MyCell.swift in Sources */,
 				95F813EB21E1505D00A04915 /* ViewController.swift in Sources */,
 				95F813E921E1505D00A04915 /* AppDelegate.swift in Sources */,
 			);
